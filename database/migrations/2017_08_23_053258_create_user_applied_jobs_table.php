@@ -15,6 +15,9 @@ class CreateUserAppliedJobsTable extends Migration
     {
         Schema::create('user_applied_jobs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('department');
+            $table->string('user_id');
             $table->timestamps();
         });
     }
